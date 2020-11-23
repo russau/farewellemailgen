@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>farewell email generator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- <link href="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker3.min.css" rel="stylesheet"> -->
+  </head>
+  <body>
+
+    <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+      <form role="form">
+        <div class="form-group">
+          <label>Duration</label>
+          <input type="text" class="form-control" id="duration" placeholder="2 years">
+        </div>
+        <div class="form-group">
+          <label>Email address</label>
+          <input type="email" class="form-control" id="personal_email">
+        </div>
+        <div class="form-group">
+          <label>LinkedIn</label>
+          <input type="text" class="form-control" id="linkedin" name="linkedin" placeholder="https://www.linkedin.com/in/...">
+        </div>
+        <div class="form-group">
+          <label>City</label>
+          <input type="text" class="form-control" id="city" name="city">
+        </div>
+        <div class="form-group">
+          <label>Cuisine</label>
+          <input type="text" class="form-control" id="cuisine" name="cuisine" placeholder="e.g. Malaysian, Lebanese, Barbecue, Maltese">
+        </div>
+
+
+        <!-- question -->
+        <div class="form-group">
+          <label>How much did you like working with everyone there?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q1" value="q1a" checked>
+            <label class="form-check-label" for="q1a">&#x1f600;</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q1" value="q1b">
+            <label class="form-check-label" for="q1b">&#x1f610;</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q1" value="q1c">
+            <label class="form-check-label" for="q1c">&#x1f644;</label>
+          </div>
+        </div>
+
+        <!-- question -->
+        <div class="form-group">
+          <label>How much did you like the work?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q2" value="q2a" checked>
+            <label class="form-check-label" for="q2a">&#x1f600;</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q2" value="q2b">
+            <label class="form-check-label" for="q2b">&#x1f610;</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q2" value="q2c">
+            <label class="form-check-label" for="q2c">&#x1f644;</label>
+          </div>
+        </div>
+
+
+        <!-- question -->
+        <div class="form-group">
+          <label>Unattributed quote from</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q3" value="q3a" checked>
+            <label class="form-check-label" for="q3a">Perfect Strangers <a href="https://www.youtube.com/watch?v=8vbnLYROCj8" target="_blank">[view]</a></label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q3" value="q3b">
+            <label class="form-check-label" for="q3b">Diff'rent Strokes <a href="https://youtu.be/IU28sbyBILA?t=9" target="_blank">[view]</a></label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q3" value="q3c">
+            <label class="form-check-label" for="q3c">The Littlest Hobo <a href="https://www.youtube.com/watch?v=lgGKSjiw0HQ" target="_blank">[view]</a></label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q3" value="q3d">
+            <label class="form-check-label" for="q3d">Klingon Proverb</label>
+          </div>
+        </div>
+
+        <!-- question -->
+        <div class="form-group">
+          <label>How badly do you want people contacting you?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q4" value="q4a" checked>
+            <label class="form-check-label" for="q4a">&#x1f600;</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q4" value="q4b">
+            <label class="form-check-label" for="q4b">&#x1f610;</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q4" value="q4c">
+            <label class="form-check-label" for="q4c">&#x1f644;</label>
+          </div>
+        </div>
+
+      </form>
+    </div>
+    <div class="col-md-8">
+      <pre><code id="content"></code></pre>
+    </div>
+  </div>
+</div>
+
+    <!-- jQuery and JS bundle w/ Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous"></script> -->
+    <script>
+
+    var content = [
+      "Hello all",
+      "After [duration] it's time to move on to my next big thing.",
+      {"name" : "q1",
+       "answers" : {
+        "q1a": "It's been great knowing you all.",
+        "q1b": "I've enjoyed my time here.",
+        "q1c": "Well then..."
+      }},
+      {"name" : "q2",
+       "answers" : {
+        "q2a": "There was good days here, and there was great days.",
+        "q2b": "The work here was a great challenge.",
+        "q2c": "It's time for something new!"
+      }},
+      {"name" : "q3",
+       "answers" : {
+        "q3a": "> Sometimes the world looks perfect,\n> Nothing to rearrange.\n> Sometimes you just get a feeling\n> Like you need some kind of change.",
+        "q3b": "> Now, the world don't move to the beat of just one drum\n> What might be right for you, may not be right for some.",
+        "q3c": "> There\u2019s a voice that keeps on calling me\n> Down the road is where I\u2019ll always be",
+        "q3d": "> We succeed together in a greater whole."
+      }},
+      {"name" : "q4",
+      "answers" : {
+        "q4a": "Stay in touch!\n[personal_email]\n[linkedin]",
+        "q4b": "You can find me on LinkedIn\n[linkedin]",
+        "q4c": "Take care!"
+      }},
+      "BTW If you ever find yourself in the [city] area, hit me up, I know a great [cuisine] place!"
+    ]
+    
+    function buildContent() {
+      
+      $('#content').empty();
+      // console.log($('form').serialize());
+      content.forEach(function(item, index) {
+        var append = '';
+        if (typeof item == 'string') {
+          append = item + '\n\n';
+        }
+        else {
+          var key = $('input[name ="' + item.name + '"]:checked').val();
+          append = item.answers[key] + '\n\n';
+        }
+        // find things inside square brackets
+        var regExp = /\[([^\]]+)\]/g;
+        var matches = append.match(regExp);
+        if (matches) {
+          matches.forEach(function(item, index) {
+            var sourceId = item.replace('[', '').replace(']', '');
+            var replaceVal = $('#' + sourceId).val();
+            if (replaceVal) {
+              append = append.replace(item, replaceVal);
+            }
+          });
+        }
+        $('#content').append(append);
+      });
+    }
+    
+    // yes, jquery.  it's time for me to wake up and smell the react / angular / vuejs
+    $(function() {
+      $('input[type=radio]').change(buildContent);
+      $('input[type=text]').keyup(buildContent);
+      $('input[type=email]').keyup(buildContent);
+      buildContent();
+    });
+    </script>
+    
+  </body>
+</html>
